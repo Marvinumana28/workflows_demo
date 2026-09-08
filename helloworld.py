@@ -1,5 +1,9 @@
+import sys
+
 def main():
-    print("Hello World!")
+    print("Hello World! From Python: " + str(sys.version_info))
+    if sys.version_info >= (3, 11) and sys.version_info < (3, 12):
+        raise Exception("Python version 3.11.x is unsupported!")
 
 if __name__ == "__main__":
     main()
